@@ -1,0 +1,54 @@
+body {
+    font-family: gilroy, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff0000;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+main {
+    display: flex;
+}
+.videoItem{
+    cursor: pointer;
+}
+
+#videoPlayer {
+    flex: 2;
+    padding: 20px;
+}
+
+#videoList {
+    flex: 1;
+    padding: 20px;
+}
+
+.videoItem {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.videoItem video{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.videoItem  h3{
+    font-size: 2vw;
+    font-weight: 800;
+}
+.videoItem  p{
+    font-size: 1vw;
+    width: 50%;
+}
+
+/* Add more styles as needed */

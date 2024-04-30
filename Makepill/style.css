@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,500&family=Nunito:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+.section1 {
+    height: 100vh;
+    width: 100%;
+}
+.section1 .one .header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between; 
+   z-index: 10;
+   padding: 20px 0; 
+   color: white;
+}
+.section1 .one .header i{
+    font-size: 1.8vw;
+    cursor: pointer;
+}
+.section1 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+.section1 .one .text-content{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.section1 .one .text-content .head h1{
+    font-size:6.7vw;
+    font-weight: 600;
+    line-height: 7rem;
+}
+.section1 .one .text-content .head span{
+    color:yellow;
+}
+/* now lets make cursor */
+.cursor {
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =================================SECTION 2=================================== */
+
+.section2 {
+    min-height: 100vh;
+    width: 100%;
+    cursor: pointer;
+}
+
+.section2 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ===========================section3======================== */
+
+.section3 {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section3 .three{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.section3 .three .left,
+.section3 .three .right{
+    width: 100%;
+    height: 100%;
+}
+.section3 .three .left video{
+    width: 80%;
+    height: 80%;
+}
+.section3 .three .right h1{
+    margin: 30px 0px;
+    font-weight: 500;
+}
+/* <==========================section4========================> */
+.section4{
+    min-height: 100vh;
+    height: 100%;
+    padding: 20px 0px;
+    overflow:hidden;
+}
+.section4 .services {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transition: background-color 0.4s ease-in; /* Added transition property */
+  }
+  
+  .section4 .services:hover {
+    background-color: #0f0f0f;
+  }
+.section4 .services:hover h5 {
+    color: white;
+}
+.section4 .four .moving-text .text{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin: 50px 0px;
+}
+.section4 .four .moving-text .text .first{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: move linear infinite 15s;
+}
+.section4 .four .moving-text .text .first video {
+    height: 150px;
+    width: 150px;
+    margin: 0 50px;
+}
+
+.section4 .four .moving-text .text .first h1 {
+    font-size: 6vw;
+    text-transform: uppercase;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+/* ===============projects=================== */
+
+/* ============projects========== */
+
+.section4 .four .projects {
+    position: relative;
+    height: 110vh;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.section4 .four .projects .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.section4 .four .projects .bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0f0f0f6e;
+    z-index: 1;
+}
+
+.section4 .four .projects .bg video {
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;
+    position: relative;
+    display: none;
+}
+
+.section4 .four .projects .first-project .first {
+    margin: 100px 0;
+    padding: 40px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section4 .four .projects .first-project .first .about {
+    display: flex;
+}
+
+.section4 .four .projects .first-project .first .about h4 {
+    margin: 0 30px;
+    border: 1px solid #ccc;
+    padding: 7px 10px;
+    border-radius: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all ease 1s;
+}
+
+.section4 .four .projects .first-project .first:hover h4 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* <=================SECTION5====================> */
+
+.section5{
+    height: 100vh;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section5 .five{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.section5 .five .left,
+.section5 .five .right{
+    height: 100%;
+    width: 100%;
+    margin-left: 100px;
+}
+.section5 .five .right video{
+    height: 90%;
+    width: 90%;
+}
+.section5 .five .left .one{
+    overflow: hidden;
+    margin: 30px 0;
+}
+.section5 .five .left h1{
+    font-size: 2.5vw;
+}
+
+/* ======================SECTION 6====================== */
+.section6 {
+    height: 100vh;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.section6 .follow .box {
+    margin: 50px 0;
+    padding: 15px 0;
+    /* background: aqua; */
+    position: relative;
+    overflow: hidden;
+}
+
+.section6 .follow .box .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222222;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .7s ease all;
+
+}
+
+.section6 .follow .box:hover .back {
+    background-color: #222222;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section6 .follow .box .back .insta {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    animation: insta linear infinite 15s;
+    opacity: 0;
+    scale: .5;
+    transition: all ease .7s;
+
+}
+
+.section6 .follow .box:hover .back .insta {
+    opacity: 1;
+    scale: 1.1;
+}
+
+.section6 .follow .box .back .insta h3 {
+    margin: 0 50px;
+    font-size: 2vw;
+    white-space: nowrap;
+}
+
+@keyframes insta {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media only screen and (max-width:600px) {
+    body{
+        margin:0px;
+        padding:0px;
+        box-sizing:border box;
+    }
+    .cursor{
+        display: none !important;
+    }
+    .section1 .one .header i{
+        font-size: 5.8vw;
+        cursor: pointer;
+    }
+    .section1 .one .text-content .head h1{
+        font-size: 7.7vw;
+        font-weight: 600;
+        line-height: 3rem;
+    }
+    .section1 .one .text-content .head p{
+        padding-top: 10px;
+        line-height: 5vw;
+        font-size: 3.5vw;
+    }
+    .section2{
+        min-height:80vh;
+    }
+    .section2 video{
+        height: 80vh;
+    }
+    .section3 .three{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 15vw;
+        padding: 3vw;
+    }
+    .section3 .three .right h1 {
+        margin: 10px 0px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .section4 .four .moving-text .text .first video{
+        height: 80px;
+        width: 80px;
+        margin: 0px 30px;
+    }
+    .section5 .five{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        /* padding: 0 30px; */
+        text-align: center;
+        color: white;
+        margin: 0px;
+    }
+    .section4 .four .projects .first-project .first .about{
+        display: none;
+    }
+    .section5{
+        background-color: #0f0f0f;
+    }
+    .section5 .five .left h1{
+        font-size: 5vw;
+    }
+    .section5 .five .left, .section5 .five .right{
+        margin-left: 0px;
+    }
+    .section6 .follow .box .back .insta h3{
+        font-size: 7vw;
+    }
+}

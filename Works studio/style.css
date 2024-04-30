@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  /* =====================  LOADER ======================================= */
+  
+  #loader{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    background-color: black;
+  }
+  #loader video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: 16;
+  
+  }
+  #loader h1{
+    font-size: 6.5vw;
+    font-weight: 100;
+    line-height: 0.7;
+    text-align: center;
+    color: white;
+    position: absolute;
+    z-index: 15;
+  }
+  #yellow1{
+    width: 100%;
+    height: 100vh;
+    background-color: #F5E41B;
+    position: absolute;
+    z-index:16;
+  }
+  #yellow2{
+    width: 100%;
+    height: 100vh;
+    background-color: #F5E41B;
+    position: absolute;
+    z-index: 7;
+  }
+  
+  /* ===================== Main Wrapper Div ==============================*/
+  #main{
+    background-color: black;
+  }
+  /* =====================  NAVBAR ======================================= */
+  #nav{
+      position: absolute;
+      width: 100%;
+      padding: 30px 50px;
+      z-index: 10;
+  }
+  /* =====================  PAGE 1 ======================================= */
+  
+  #page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #F5E41B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  #page1 h1{
+    font-size: 6.5vw;
+    font-weight: 100;
+    line-height: 0.7;
+    text-align: center;
+  }
+  /* =====================  PAGE 2 ======================================= */
+  #page2{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    text-align: center;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /* ============================== HORIZONRAL SCROLL ======================================== */
+  
+  .elem{
+   position: relative;
+   width: 100%;
+   cursor: pointer;
+  }
+  .elem h2 {
+    font-size: 5.2vw;
+    line-height: 5.5vw;
+    font-weight: 100;
+    position: relative;
+    z-index: 9;
+    text-transform: uppercase;
+  }
+  .elem .moving{
+    width: 100%;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    padding: 8px 0;
+    transform: translate(0%,-50%)  scaleY(0);
+    background-color: #F5E41B;
+    overflow: hidden;
+    transition: all ease 0.5s;
+  }
+  .elem .moving .blur{
+    width: 50%;
+    position: absolute;
+    padding: 17px 0px;
+    top: 50%;
+    left: 50%;
+    z-index: 8;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right , #f5e31be5 , #F5E41B , #f5e31be5);
+    box-shadow: 10px 0px 20px 20px #F5E41B , -10px 0px 20px 10px #F5E41B;
+  }
+  
+  .elem .moving .moving-in {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+  }
+  
+  .elem .moving .moving-in h5 {
+    font-size: 12px;
+    display: inline-block;
+    color: #000;
+    font-family: 'gilroy';
+    text-transform: uppercase;
+    margin-right: 17px;
+    opacity: 0;
+    transition: all ease 0.5s;
+    transition-delay:0.5s;
+  }
+  .elem:hover .moving{
+    transform: translate(0%,-50%) scaleY(1);
+  
+  }
+  .elem .moving .moving-in h5 {
+    opacity: 0.6;
+  }
+  .elem:hover h2{
+    font-style: italic;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  
+  
+  
+  
+  /* ============================= PAGE 3 ========================================== */
+  
+  #page3{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  #image-container{
+    display: flex;
+    padding: 30px;
+    align-items: flex-start;
+  }
+  .image-div{
+    width: 30vw;
+    margin: 40px 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  
+  }
+  .image-div img{
+    width: 100%;
+    height: 100%;
+    transition: all ease 0.5s;
+    object-fit: cover;
+  }
+  .image-div:hover img{
+    scale: 1.2;
+  }
+  
+  .image-div-large{
+    width: 30vw;
+    height: 50vw;
+    margin: 40px 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all ease 0.5s;
+  }
+  .image-div-large:hover img{
+    scale: 1.2;
+  }
+  
+  .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000000;
+    opacity: 0;
+    transition: all ease 0.5s;
+    z-index: 9;
+  }
+  .overlay p{
+    font-size: 3vw;
+    font-weight: 100;
+    color: white;
+  }
+  .image-div:hover .overlay{
+    opacity: 1;
+  }
+  
